@@ -7,7 +7,7 @@ import { NavBar } from "./components/NavBar";
 
 function App() {
   return (
-    <div>
+    <div className=" flex justify-center flex-wrap bg-[#141414] pt-8">
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
