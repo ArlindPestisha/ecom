@@ -3,7 +3,7 @@ import Hero from "../components/Hero";
 
 const Home = () => {
   return (
-    <div className=" flex w-auto">
+    <div className="md:items-center md:flex relative container ">
       <Hero />
     </div>
   );

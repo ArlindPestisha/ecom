@@ -3,7 +3,7 @@ import Button from "./Button";
 
 const Hero = () => {
   return (
-    <div className=" flex items-center">
+    <div className="flex items-center flex-col-reverse md:flex-row px-6 mx-auto mt-10 space-y-0 md:space-y-0">
       <div className=" text-white w-[400px] h-[350px] pt">
         <h2 className=" font-normal text-sm text-white opacity-50 tracking-[10px] leading-5">
           NEW PRODUCT

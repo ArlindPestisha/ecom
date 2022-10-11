@@ -28,16 +28,14 @@ function App() {
     getData();
   }, []);
 
-  
   return (
-    <div className=" flex justify-center flex-wrap bg-[#141414] pt-8">
+    <div className="mx-auto md:flex xl:flex justify-center items-center flex-wrap bg-[#141414] pt-8 ">
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/headphones" element={<Headphones />} />
         <Route path="/speakers" element={<Speakers />} />
         <Route path="/earphones" element={<Earphones />} />
-        
       </Routes>
     </div>
   );
