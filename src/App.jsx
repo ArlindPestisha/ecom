@@ -4,8 +4,31 @@ import Headphones from "./pages/Headphones";
 import Speakers from "./pages/Speakers";
 import Earphones from "./pages/Earphones";
 import { NavBar } from "./components/NavBar";
+import { useState, useEffect } from "react";
 
 function App() {
+  const [data, setData] = useState([]);
+
+  const getData = () => {
+    fetch("data.json", {
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+    })
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (myJson) {
+        console.log(myJson);
+        setData(myJson);
+      });
+  };
+  useEffect(() => {
+    getData();
+  }, []);
+
+  
   return (
     <div className=" flex justify-center flex-wrap bg-[#141414] pt-8">
       <NavBar />
@@ -14,6 +37,7 @@ function App() {
         <Route path="/headphones" element={<Headphones />} />
         <Route path="/speakers" element={<Speakers />} />
         <Route path="/earphones" element={<Earphones />} />
+        
       </Routes>
     </div>
   );
