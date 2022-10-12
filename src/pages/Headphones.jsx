@@ -1,7 +1,7 @@
 import React from "react";
 
 const Headphones = () => {
-  return <div>H</div>;
+  return <div>Heloo you</div>;
 };
 
 export default Headphones;

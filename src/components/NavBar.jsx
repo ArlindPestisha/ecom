@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export const NavBar = () => {
   return (
@@ -10,10 +11,18 @@ export const NavBar = () => {
         </div>
 
         <ul className="pt-4 hidden space-x-8 text-base text-white md:flex md:justify-between md:pt-0">
-          <li>Home</li>
-          <li>Headphones</li>
-          <li>Speakers</li>
-          <li>Earphones</li>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/headphones">Headphones</Link>
+          </li>
+          <li>
+            <Link to="/speakers">Speakers</Link>
+          </li>
+          <li>
+            <Link to="/earphones">Earphones</Link>
+          </li>
         </ul>
         <div className="sm:block sh">
           {" "}
