@@ -3,12 +3,12 @@ import React from "react";
 const Category = () => {
   return (
     <>
-      <div className=" flex flex-col md:flex-row justify-center mt-32 w-[1110px]  mb-10">
+      <div className=" flex flex-col md:flex-row justify-center mt-32 xl:w-[1110px] mb-24  md:w-[768px]">
         <div className=" w-[350px] overflow-hidden rounded-lg relative text-center">
           <div className=" pt-8">
             {" "}
             <img
-              src="/public/assets/shared/desktop/image-category-thumbnail-headphones.png"
+              src="/assets/shared/desktop/image-category-thumbnail-headphones.png"
               alt=""
             />
           </div>
@@ -22,7 +22,7 @@ const Category = () => {
             <p>Shop</p>
             <span className=" p-2">
               <img
-                src="/public/assets/shared/desktop/icon-arrow-right.svg"
+                src="/assets/shared/desktop/icon-arrow-right.svg"
                 alt=""
               />
             </span>
@@ -32,8 +32,9 @@ const Category = () => {
         <div className=" w-[350px] overflow-hidden rounded-lg relative text-center">
           <div className=" pt-8">
             {" "}
-            <img className="mb-2"
-              src="/public/assets/shared/desktop/image-category-thumbnail-speakers.png"
+            <img
+              className="mb-2"
+              src="/assets/shared/desktop/image-category-thumbnail-speakers.png"
               alt=""
             />
           </div>
@@ -45,10 +46,7 @@ const Category = () => {
           <div className="flex justify-center">
             <p>Shop</p>
             <span className=" p-2">
-              <img
-                src="/public/assets/shared/desktop/icon-arrow-right.svg"
-                alt=""
-              />
+              <img src="/assets/shared/desktop/icon-arrow-right.svg" alt="" />
             </span>
           </div>
         </div>
@@ -56,8 +54,9 @@ const Category = () => {
         <div className=" w-[350px] overflow-hidden rounded-lg relative text-center">
           <div className=" pt-8">
             {" "}
-            <img className=" mb-9"
-              src="/public/assets/shared/desktop/image-category-thumbnail-earphones.png"
+            <img
+              className=" mb-9"
+              src="/assets/shared/desktop/image-category-thumbnail-earphones.png"
               alt=""
             />
           </div>
@@ -69,10 +68,7 @@ const Category = () => {
           <div className="flex justify-center">
             <p>Shop</p>
             <span className=" p-2">
-              <img
-                src="/public/assets/shared/desktop/icon-arrow-right.svg"
-                alt=""
-              />
+              <img src="/assets/shared/desktop/icon-arrow-right.svg" alt="" />
             </span>
           </div>
         </div>
