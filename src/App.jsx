@@ -5,6 +5,7 @@ import Speakers from "./pages/Speakers";
 import Earphones from "./pages/Earphones";
 import { NavBar } from "./components/NavBar";
 import { useState, useEffect } from "react";
+import Footer from "./components/Footer";
 
 const products = [
   {
@@ -583,18 +584,18 @@ const products = [
   },
 ];
 
- function App() {
-//   function renderProduct(p) {
-//     return (
-//       <div key={p.id} className="product">
-//         <a href="/">
-//           <img src={p.categoryImage.desktop} alt={p.name} />
-//           <h3>{p.name}</h3>
-//           <p>${p.price}</p>
-//         </a>
-//       </div>
-//     );
-//   }
+function App() {
+  //   function renderProduct(p) {
+  //     return (
+  //       <div key={p.id} className="product">
+  //         <a href="/">
+  //           <img src={p.categoryImage.desktop} alt={p.name} />
+  //           <h3>{p.name}</h3>
+  //           <p>${p.price}</p>
+  //         </a>
+  //       </div>
+  //     );
+  //   }
   // const [data, setData] = useState([]);
 
   // const getData = () => {
@@ -629,6 +630,9 @@ const products = [
         <Route path="/earphones" element={<Earphones />} />
       </Routes>
       {/* <section>{products.map(renderProduct)}</section> */}
+      
+        <Footer />
+      
     </div>
   );
 }
