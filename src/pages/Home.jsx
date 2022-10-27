@@ -2,6 +2,7 @@ import React from "react";
 import Hero from "../components/Hero";
 import Category from "../components/Category";
 import ShowCaseCTA from "../components/ShowCaseCTA";
+import TextSection from "../components/TextSection";
 
 const Home = () => {
   return (
@@ -9,7 +10,7 @@ const Home = () => {
       <Hero />
       <Category />
       <ShowCaseCTA />
-      
+      <TextSection />
     </div>
   );
 };

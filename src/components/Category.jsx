@@ -4,6 +4,7 @@ const Category = () => {
   return (
     <>
       <div className=" flex flex-col md:flex-row justify-center mt-32 xl:w-[1110px] mb-24  md:w-[768px]">
+        // Headphones
         <div className=" w-[350px] overflow-hidden rounded-lg relative text-center">
           <div className=" pt-8">
             {" "}
@@ -21,14 +22,11 @@ const Category = () => {
           <div className="flex justify-center">
             <p>Shop</p>
             <span className=" p-2">
-              <img
-                src="/assets/shared/desktop/icon-arrow-right.svg"
-                alt=""
-              />
+              <img src="/assets/shared/desktop/icon-arrow-right.svg" alt="" />
             </span>
           </div>
         </div>
-
+        // Speakers
         <div className=" w-[350px] overflow-hidden rounded-lg relative text-center">
           <div className=" pt-8">
             {" "}
@@ -50,7 +48,7 @@ const Category = () => {
             </span>
           </div>
         </div>
-
+        // Earphones
         <div className=" w-[350px] overflow-hidden rounded-lg relative text-center">
           <div className=" pt-8">
             {" "}
