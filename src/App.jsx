@@ -4,29 +4,16 @@ import Headphones from "./pages/Headphones";
 import Speakers from "./pages/Speakers";
 import Earphones from "./pages/Earphones";
 import { NavBar } from "./components/NavBar";
-import { useState, useEffect } from "react";
 import Footer from "./components/Footer";
-import { getProducts } from "./services/productService";
 import Spinner from "./components/Spinner";
+import useFetch from "./services/useFetch";
 
 function App() {
-  const [products, setProducts] = useState([]);
-  const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    async function init() {
-      try {
-        const response = await getProducts("earphones");
-        setProducts(response);
-      } catch (e) {
-        setError(e);
-      } finally {
-        setLoading(false);
-      }
-    }
-    init();
-  }, []);
+  const {
+    data: products,
+    loading,
+    error,
+  } = useFetch("products?category=headphones");
 
   function renderProduct(p) {
     return (
