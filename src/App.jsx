@@ -1,35 +1,10 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import Headphones from "./pages/Headphones";
-import Speakers from "./pages/Speakers";
-import Earphones from "./pages/Earphones";
+import Products from "./pages/Products";
 import { NavBar } from "./components/NavBar";
 import Footer from "./components/Footer";
-import Spinner from "./components/Spinner";
-import useFetch from "./services/useFetch";
 
 function App() {
-  const {
-    data: products,
-    loading,
-    error,
-  } = useFetch("products?category=headphones");
-
-  function renderProduct(p) {
-    return (
-      <div key={p.id} className="product">
-        <a href="/">
-          <img src={p.categoryImage.desktop} alt={p.name} />
-          <h3>{p.name}</h3>
-          <p>${p.price}</p>
-        </a>
-      </div>
-    );
-  }
-
-  if (error) throw error;
-  if (loading) return <Spinner />;
-
   return (
     <div className="flex justify-center flex-wrap w-full  ">
       <div className="bg-[#1a1a1a] w-full">
@@ -38,11 +13,8 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/headphones" element={<Headphones />} />
-        <Route path="/speakers" element={<Speakers />} />
-        <Route path="/earphones" element={<Earphones />} />
+        <Route path="/:category" element={<Products />} />
       </Routes>
-      <section>{products.map(renderProduct)}</section>
 
       <Footer />
     </div>
